@@ -1,0 +1,8 @@
+@import "_var.scss";
+
+.do-countdown {
+  cursor: pointer;
+  &.disable {
+    color: $disable-color;
+  }
+}

@@ -1,0 +1,21 @@
+@import "./var";
+
+.do-button {
+  font-size: $font-size;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 9px 16px;
+  background-color: #fff;
+  &:focus {
+    outline: none;
+  }
+  &:active,
+  &:focus{
+    color: $primary-color-dark;
+    border-color: $primary-color-dark;
+  }
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+}
