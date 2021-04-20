@@ -5,13 +5,13 @@
     </div>
     <div>
       <do-countdown
-        :count="5"
+        :count="60"
+        @count-start="countStart"
         @count-end="countEnd"
       />
     </div>
   </div>
 </template>
-
 <script>
 import DoButton from './components/button.vue'
 import DoCountdown from './components/Countdown.vue'
@@ -28,8 +28,11 @@ export default {
     }
   },
   methods: {
+    countStart() {
+      console.log('计时开始')
+    },
     countEnd() {
-      console.log('计数结束')
+      console.log('计时结束')
     }
   }
 }

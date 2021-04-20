@@ -9,7 +9,6 @@
   &:focus {
     outline: none;
   }
-  &:active,
   &:focus{
     color: $primary-color-dark;
     border-color: $primary-color-dark;
@@ -18,4 +17,9 @@
     color: $primary-color;
     border-color: $primary-color;
   }
+  &:active {
+    color: $primary-color-dark;
+    border-color: $primary-color-dark;
+  }
+  
 }
