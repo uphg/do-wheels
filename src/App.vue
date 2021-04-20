@@ -15,15 +15,9 @@
   </div>
 </template>
 <script>
-import DoButton from './components/button.vue'
-import DoCountdown from './components/Countdown.vue'
 
 export default {
   name: 'App',
-  components: {
-    DoButton,
-    DoCountdown
-  },
   data() {
     return {
       isCount: false

@@ -1,25 +1,27 @@
-@import "./var";
+@import "./variable";
 
 .do-button {
-  font-size: $font-size;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
+  color: $__color-text-primary;
+  font-size: $__font-size;
+  border: 1px solid $__border-color-light;
+  border-radius: $__border-radius;
   padding: 9px 16px;
   background-color: #fff;
+  cursor: pointer;
   &:focus {
     outline: none;
   }
   &:focus{
-    color: $primary-color-dark;
-    border-color: $primary-color-dark;
+    color: $__color-primary-dark;
+    border-color: $__color-primary-dark;
   }
   &:hover {
-    color: $primary-color;
-    border-color: $primary-color;
+    color: $__color-primary;
+    border-color: $__color-primary;
   }
   &:active {
-    color: $primary-color-dark;
-    border-color: $primary-color-dark;
+    color: $__color-primary-dark;
+    border-color: $__color-primary-dark;
   }
-  
+
 }
