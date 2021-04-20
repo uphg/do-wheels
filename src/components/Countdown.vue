@@ -33,15 +33,12 @@ export default {
       }
     },
     clock() {
-      console.log('this.currentTime')
-      console.log(this.currentTime)
       if (this.currentTime <= 0) {
         this.disable = false
         this.currentTime = this.count
         this.$emit('count-end')
         return false
       }
-
       const timer = setTimeout(() => {
         this.currentTime -= 1
         window.clearTimeout(timer)
