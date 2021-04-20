@@ -2,7 +2,7 @@
   <span
     class="do-countdown"
     :class="{ disable: disable }"
-    @click="startCount"
+    @click="$emit('click', startCount)"
   >{{ currentText }}</span>
 </template>
 <script>
@@ -28,7 +28,7 @@ export default {
     startCount() {
       if (this.currentTime >= this.count && !this.disable) {
         this.disable = true
-        this.$emit('count-start')
+        this.$emit('count-open')
         this.clock()
       }
     },

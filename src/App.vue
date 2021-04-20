@@ -5,9 +5,11 @@
     </div>
     <div>
       <do-countdown
-        :count="60"
-        @count-start="countStart"
-        @count-end="countEnd"
+        ref="countdown"
+        :count="5"
+        @count-open="isCount = true"
+        @count-end="isCount = false"
+        @click="clickCount"
       />
     </div>
   </div>
@@ -24,15 +26,15 @@ export default {
   },
   data() {
     return {
-      count: 60
+      isCount: false
     }
   },
   methods: {
-    countStart() {
-      console.log('计时开始')
-    },
-    countEnd() {
-      console.log('计时结束')
+    clickCount() {
+      if (!this.isCount) {
+        console.log('开启倒计时')
+        this.$refs['countdown'].startCount()
+      }
     }
   }
 }
