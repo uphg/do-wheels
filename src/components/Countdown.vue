@@ -7,6 +7,7 @@
 </template>
 <script>
 export default {
+  name: 'DoCountdown',
   props: {
     count: {
       type: Number,
