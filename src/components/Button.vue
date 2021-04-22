@@ -6,6 +6,4 @@ export default {
   name: 'DoButton'
 }
 </script>
-<style lang="scss">
-@import "~@/styles/button.scss";
-</style>
+<style lang="scss" src="../styles/button.scss"></style>

@@ -49,6 +49,4 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-@import "~@/styles/countdown.scss";
-</style>
+<style lang="scss" src="../styles/countdown.scss"></style>
