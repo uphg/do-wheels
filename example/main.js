@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import '../icons/index' // 引入 icon
-// import '../icons/svg/at.svg' // 引入 icon
+import '../src/icon/svg'
 
 import Button from '../src/components/Button.vue'
 import Icon from '../src/components/Icon.vue'
