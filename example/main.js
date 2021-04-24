@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import '../src/icon/svg'
+import '../src/icon/import-svg'
 
 import Button from '../src/components/Button.vue'
 import Icon from '../src/components/Icon.vue'

@@ -12,6 +12,13 @@
         @click="clickCount"
       />
     </div>
+    <div>
+      <do-icon name="alarm" />
+      <do-icon name="aspect-ratio" />
+    </div>
+    <div>
+      <do-button icon="bug">ICON按钮</do-button>
+    </div>
   </div>
 </template>
 <script>

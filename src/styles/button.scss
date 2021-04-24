@@ -8,6 +8,12 @@
   padding: 9px 16px;
   background-color: #fff;
   cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  [class*=do-icon]+span {
+    margin-left: 5px;
+  }
   &:focus {
     outline: none;
   }

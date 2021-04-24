@@ -1,6 +1,6 @@
 
 <template>
-  <svg class="do-icon" aria-hidden="true">
+  <svg class="do-icon" :class="{ [`icon-${iconName}`]: iconName }" aria-hidden="true">
     <use :xlink:href="iconName" />
   </svg>
 </template>
@@ -21,10 +21,10 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.do-icon {
-  vertical-align: -0.15em;
-  overflow: hidden;
-}
-</style>
+<style lang="scss" src="../styles/icon.scss"></style>
+<!--<style lang="scss">-->
+<!--.do-icon {-->
+<!--  vertical-align: -0.15em;-->
+<!--  overflow: hidden;-->
+<!--}-->
+<!--</style>-->
