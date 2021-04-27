@@ -1,0 +1,15 @@
+@import "./common/variable.scss";
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.do-loading {
+  color: $__color-text-looming;
+  animation: spin 1s infinite linear;
+}
