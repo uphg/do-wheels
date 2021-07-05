@@ -1,12 +1,13 @@
 <template>
   <span
     class="do-countdown"
-    :class="{ disable: currentTime < count }"
-    @click="startCount"
+    :class="{ disable: disable }"
+    @click="$emit('click', startCount)"
   >{{ currentText }}</span>
 </template>
 <script>
 export default {
+  name: 'DoCountdown',
   props: {
     count: {
       type: Number,
@@ -15,37 +16,37 @@ export default {
   },
   data() {
     return {
-      currentTime: this.count
+      currentTime: this.count,
+      disable: false
     }
   },
   computed: {
     currentText() {
-      return this.currentTime >= this.count ? '获取验证码' : this.currentTime + '秒后重试'
+      return !this.disable ? '获取验证码' : this.currentTime + '秒后重试'
     }
   },
   methods: {
     startCount() {
-      if (this.currentTime >= this.count) {
+      if (this.currentTime >= this.count && !this.disable) {
+        this.disable = true
+        this.$emit('count-open')
         this.clock()
       }
     },
     clock() {
-      console.log('this.currentTime')
-      console.log(this.currentTime)
       if (this.currentTime <= 0) {
+        this.disable = false
         this.currentTime = this.count
         this.$emit('count-end')
         return false
       }
-      this.currentTime -= 1
       const timer = setTimeout(() => {
-        this.clock()
+        this.currentTime -= 1
         window.clearTimeout(timer)
+        this.clock()
       }, 1000)
     }
   }
 }
 </script>
-<style lang="scss">
-@import "~@/styles/countdown.scss";
-</style>
+<style lang="scss" src="../styles/countdown.scss"></style>
